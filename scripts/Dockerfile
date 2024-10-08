@@ -55,13 +55,13 @@ RUN git clone https://github.com/xyysjd/subconverter-2 --depth=1 && \
 FROM alpine:3.16
 LABEL maintainer="tindy.it@gmail.com"
 
-RUN apk add --no-cache --virtual subconverter-deps pcre2 libcurl yaml-cpp
+RUN apk add --no-cache --virtual subconverter-2-deps pcre2 libcurl yaml-cpp
 
-COPY --from=builder /usr/bin/subconverter /usr/bin/
+COPY --from=builder /usr/bin/subconverter-2 /usr/bin/
 COPY --from=builder /base /base/
 
 # Set entry point
 WORKDIR /base
-CMD ["subconverter"]
+CMD ["subconverter-2"]
 
 EXPOSE 25500/tcp
