@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  REGISTRY_IMAGE: xyysjd/subconverter-2
+  REGISTRY_IMAGE: laozishen/subconverter-2
 
 jobs:
   build:
