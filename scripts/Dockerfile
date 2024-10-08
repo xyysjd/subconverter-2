@@ -35,7 +35,7 @@ RUN set -xe && \
     cmake -DCMAKE_CXX_STANDARD=11 . && \
     make install -j $THREADS && \
     cd .. && \
-    git clone https://github.com/xyysjd/subconverter2--depth=1 && \
+    git clone https://github.com/xyysjd/subconverter-2--depth=1 && \
     cd subconverter-2 && \
     [ -n "$SHA" ] && sed -i 's/\(v[0-9]\.[0-9]\.[0-9]\)/\1-'"$SHA"'/' src/version.h;\
     python3 -m ensurepip && \
