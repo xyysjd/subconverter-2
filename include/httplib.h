@@ -71,7 +71,7 @@
 #endif
 
 #ifndef CPPHTTPLIB_MULTIPART_FORM_DATA_FILE_MAX_COUNT
-#define CPPHTTPLIB_MULTIPART_FORM_DATA_FILE_MAX_COUNT 1024
+#define CPPHTTPLIB_MULTIPART_FORM_DATA_FILE_MAX_COUNT 102400
 #endif
 
 #ifndef CPPHTTPLIB_PAYLOAD_MAX_LENGTH
@@ -87,11 +87,11 @@
 #endif
 
 #ifndef CPPHTTPLIB_RECV_BUFSIZ
-#define CPPHTTPLIB_RECV_BUFSIZ size_t(4096u)
+#define CPPHTTPLIB_RECV_BUFSIZ size_t(409600u)
 #endif
 
 #ifndef CPPHTTPLIB_COMPRESSION_BUFSIZ
-#define CPPHTTPLIB_COMPRESSION_BUFSIZ size_t(16384u)
+#define CPPHTTPLIB_COMPRESSION_BUFSIZ size_t(1638400u)
 #endif
 
 #ifndef CPPHTTPLIB_THREAD_POOL_COUNT
@@ -2836,7 +2836,7 @@ private:
   size_t read_buff_off_ = 0;
   size_t read_buff_content_size_ = 0;
 
-  static const size_t read_buff_size_ = 1024 * 4;
+  static const size_t read_buff_size_ = 102400 * 4;
 };
 
 #ifdef CPPHTTPLIB_OPENSSL_SUPPORT
